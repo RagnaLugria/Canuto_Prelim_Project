@@ -3,6 +3,11 @@ namespace App\Http\Controller
     
 class UserController extends Controller
 {
+    public function getDashboard()
+    {
+        return view('dashboard');
+    }
+    
     public function postSignUp(Request $request)
     {
         $email = $request['email'];
@@ -16,7 +21,7 @@ class UserController extends Controller
         
         $user->save();
         
-        return redirect()->back();
+        return redirect()->route('dashboard');
     }
     
     public function postSignIn(Request $request)
