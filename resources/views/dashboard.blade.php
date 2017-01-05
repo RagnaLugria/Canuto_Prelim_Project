@@ -1,19 +1,20 @@
 @extends('layouts.master')
 
-@section('title')
+@section('content')
     <section class="row new-post">
         <div class="col-md-6 col-md-offset-3">
             <header><h3>What Do You Have To Say?</h3></header>
-            <form action="">
+            <form action="{{ route('post.create') }}" method="">
                 <div class="form-group">
-                    <textarea class="form-control" name="new-post" id="new-post" cols="30" rows="5" placeholder="Your Post "></textarea>
+                    <textarea class="form-control" name="body" id="new-post" cols="30" rows="5" placeholder="Your Post "></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Create Post</button>
+                <input type="hidden" value="{{ Session::token()}}" name="_token">
             </form>
         </div>
     </section>
     <section class="row posts">
-        <div class="col-md-6 col-md-3-offset-3">
+        <div class="col-md-6 col-md-offset-3">
             <header><h3>What other people say...</h3></header>
             <article class="post">
                 <p>This is a dummy text This is a dummy text This is a dummy text This is a dummy text This is a dummy text This is a dummy text This is a dummy text This is a dummy text This is a dummy text This is a dummy text</p>

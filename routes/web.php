@@ -1,7 +1,6 @@
 <?php
 
 Route::group(['middleware' => ['web']],function(){
-
    Route::get('/',function() {
        return view('welcome');
    })->name('home');
@@ -20,6 +19,11 @@ Route::group(['middleware' => ['web']],function(){
         'uses' => 'PostController@getDashboard',
         'as' => 'dashboard',
         'middleware' => 'auth'
+    ]);
+    
+    Route::post('/createpost', [
+        'uses' => 'PostController@postCreatePost',
+        'as' => 'post.create'
     ]);
     
 });
