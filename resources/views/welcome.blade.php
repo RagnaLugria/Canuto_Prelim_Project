@@ -5,21 +5,10 @@
 @endsection
 
 @section('content')
-
-    @if(count($errors) > 0)
+    @include('includes.message-block')
     <div class="row">
         <div class="col-md-6">
-            <ul>
-                @foreach($errors->all() as $error)
-                    <li>{{$error}}</li>
-                @endforeach
-            </ul>
-        </div>
-    </div>
-    @endif
-    <div class="row">
-        <div class="col-md-6">
-            <h3>Sign Up</h3>
+            <h3>Sign Up</h3> 
             <form action="{{ route('signup') }}" method="post">
                 <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
                     <label form="email">Your E-Mail</label>
