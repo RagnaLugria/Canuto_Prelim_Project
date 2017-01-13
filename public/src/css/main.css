@@ -45,3 +45,41 @@ body {
 	color: green;
 }
 
+.social_media {
+	text-align:center;
+	position:relative;
+	top:-75px;
+}
+
+btn-facebook {
+	margin-bottom:60px;
+	padding-left:30px;
+    background-image: url(fb.gif);
+    background-color: #3b5998;
+    padding: 0px;
+    border: 3px solid white;
+    border-radius: 5px;
+    box-shadow: 1px 2px 2px grey;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 70px;
+    width: 70px;
+    color: white;
+}
+
+.btn-gmail {
+	margin-bottom:60px;
+	top:50%;
+	padding-right:30px;
+    background-image: url(g+.gif);
+    background-color: #dc4a38;
+    padding: 0px;
+    border: 3px solid white;
+    border-radius: 5px;
+    box-shadow: 1px 2px 2px grey;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 70px;
+    width: 70px;
+    color: white;
+}
