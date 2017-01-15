@@ -6,8 +6,19 @@
 
 @section('content')
     @include('includes.message-block')
+
+<!-- Website CSS style -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Website Font style -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<!-- Google Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 well">
             <h3>Sign Up</h3> 
             <form action="{{ route('signup') }}" method="post">
                 <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
@@ -34,7 +45,7 @@
                 <input type="hidden" name="_token" value="{{  Session::token()}}">
             </form>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 well signin">
             <h3>Sign In</h3>
             <form action="{{ route('signin') }}" method="post">
                 <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">

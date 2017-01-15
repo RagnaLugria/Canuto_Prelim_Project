@@ -7,6 +7,14 @@ body {
 	border-bottom: 1px solid #ccc;
 }
 
+.account-edit{
+    padding: 16px 0;
+}
+
+.profile-pic{
+    text-align: center;
+}
+
 .new-post header,
 .posts header{
 	margin-bottom: 20px;
